@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+header {
+  background: url(images/mobile/image-header.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 90dvh;
+}
+header .nav_bar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+header .nav_bar > span.hamburger {
+  cursor: pointer;
+}
+header .nav_bar .desktop_menu {
+  display: none;
+}
+header .nav_bar .mobile_menu {
+  display: none;
+  width: 90%;
+  max-width: 25rem;
+  height: auto;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: hsl(0, 0%, 100%);
+  z-index: 2;
+  margin-top: 2rem;
+}
+header .nav_bar .mobile_menu::after {
+  position: absolute;
+  top: -1.95rem;
+  right: 0;
+  content: "";
+  height: 2rem;
+  aspect-ratio: 1;
+  background: hsl(0, 0%, 100%);
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+header .nav_bar .mobile_menu ul {
+  padding: 1rem 0;
+  list-style: none;
+  text-transform: capitalize;
+  color: hsl(210, 4%, 67%);
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Barlow", sans-serif;
+}
+header .nav_bar .mobile_menu ul li {
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+header .nav_bar .mobile_menu ul li:hover {
+  text-transform: uppercase;
+  background: hsl(51, 100%, 49%);
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+  border-radius: 3rem;
+}
+header .nav_bar .show_mobile_menu {
+  display: block;
+}
+header h1 {
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2.25rem;
+  font-family: "Fraunces", serif;
+  padding: 3rem 1rem;
+  letter-spacing: 3px;
+}
+header img.arrow_down {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .graphic_photography,
+main .img_txt {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+main .columns {
+  height: 100vh;
+}
+main .columns .egg {
+  height: 50%;
+  background: url(images/mobile/image-transform.jpg) no-repeat center/cover;
+}
+main .columns .cup {
+  background: url(images/mobile/image-stand-out.jpg) no-repeat center/cover;
+  height: 50%;
+}
+main .img_txt .box {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+main .img_txt .box .text_box {
+  text-align: center;
+  width: 90%;
+  max-width: 19rem;
+  height: 90%;
+  padding: 2rem 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+main .img_txt .box .text_box h2 {
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+}
+main .img_txt .box .text_box p {
+  font-family: "Barlow", sans-serif;
+  color: hsl(210, 4%, 67%);
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+main .img_txt .box .text_box a {
+  -webkit-text-decoration: transparent;
+          text-decoration: transparent;
+  text-transform: uppercase;
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+  position: relative;
+}
+main .img_txt .box .text_box a::before {
+  height: 10px;
+  width: 0%;
+  position: absolute;
+  content: "";
+  left: -5px;
+  bottom: -2px;
+  z-index: -1;
+  border-radius: 5px;
+  background: hsl(7, 99%, 70%);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+main .img_txt .box .text_box a:hover::before {
+  width: 110%;
+}
+main .img_txt .box .text_box a.first_learnMore::before {
+  background: hsl(51, 100%, 49%);
+}
+main .graphic_photography {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .graphic_photography .box {
+  position: relative;
+}
+main .graphic_photography .box .text_box {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  bottom: -5%;
+  translate: -50% -50%;
+  text-align: center;
+}
+main .graphic_photography .apple,
+main .graphic_photography .orange {
+  height: 100vh;
+}
+main .graphic_photography .apple h1,
+main .graphic_photography .orange h1 {
+  font-family: "Fraunces", serif;
+  margin-block: 2rem;
+}
+main .graphic_photography .apple p,
+main .graphic_photography .orange p {
+  font-family: "Barlow", sans-serif;
+  line-height: 1.5rem;
+}
+main .graphic_photography .apple h1,
+main .graphic_photography .apple p,
+main .graphic_photography .orange h1,
+main .graphic_photography .orange p {
+  color: hsl(167, 40%, 24%);
+}
+main .graphic_photography .orange h1,
+main .graphic_photography .orange p {
+  color: hsl(198, 62%, 26%);
+}
+main .graphic_photography .apple {
+  background: url(images/mobile/image-graphic-design.jpg) no-repeat center/cover;
+}
+main .graphic_photography .orange {
+  background: url(images/mobile/image-photography.jpg) no-repeat center/cover;
+}
+main .client_testimonials_div {
+  padding: 2rem 0;
+  text-align: center;
+}
+main .client_testimonials_div .testimonials_heading {
+  text-transform: uppercase;
+  color: hsl(210, 4%, 67%);
+  padding: 2rem 0.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+main .client_testimonials_div .partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .client_testimonials_div .partners > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 20rem;
+}
+main .client_testimonials_div .partners > div > .employee_info h2 {
+  text-transform: capitalize;
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+}
+main .client_testimonials_div .partners > div > .employee_info span {
+  text-transform: capitalize;
+  color: hsl(210, 4%, 67%);
+}
+main .client_testimonials_div .partners > div > p {
+  color: hsl(210, 4%, 67%);
+  font-family: "Barlow", sans-serif;
+  line-height: 1.5rem;
+}
+main .client_testimonials_div .partners > div img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin: auto;
+}
+
+section.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 70vh;
+}
+section.gallery .milk {
+  background: url(images/mobile/image-gallery-milkbottles.jpg) no-repeat center/cover;
+}
+section.gallery .orange {
+  background: url(images/mobile/image-gallery-orange.jpg) no-repeat center/cover;
+}
+section.gallery .cone {
+  background: url(images/mobile/image-gallery-cone.jpg) no-repeat center/cover;
+}
+section.gallery .sugar {
+  background: url(images/mobile/image-gallery-sugar-cubes.jpg) no-repeat center/cover;
+}
+
+footer {
+  background-color: hsl(168, 34%, 41%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  padding: 4rem 0;
+}
+footer ul {
+  width: 100%;
+  max-width: 20rem;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  text-transform: capitalize;
+  color: hsl(167, 40%, 24%);
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+}
+footer ul li {
+  cursor: pointer;
+}
+footer ul li:hover {
+  text-decoration: underline;
+}
+footer .social_medias {
+  width: 50%;
+  max-width: 15rem;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .social_medias a:hover {
+  scale: 1.2;
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  header {
+    background: url(images/desktop/image-header.jpg) center/cover;
+    height: 90vh;
+  }
+  header h1 {
+    padding: 4rem 1rem;
+  }
+  header .nav_bar {
+    padding: 1rem 2rem;
+  }
+  header .nav_bar > span.hamburger {
+    display: none;
+  }
+  header .nav_bar ul.desktop_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style: none;
+    color: hsl(0, 0%, 100%);
+    text-transform: capitalize;
+    font-family: "Barlow", sans-serif;
+  }
+  header .nav_bar ul.desktop_menu li {
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    cursor: pointer;
+  }
+  header .nav_bar ul.desktop_menu li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    font-family: "Fraunces", serif;
+  }
+  main .columns {
+    height: 50vh;
+  }
+  main .img_txt {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  main .img_txt .box .text_box {
+    text-align: left;
+  }
+  main .img_txt .egg_txt {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  main .img_txt .egg,
+  main .img_txt .cup {
+    height: 100%;
+  }
+  main .img_txt .egg {
+    background: url(images/desktop/image-transform.jpg) no-repeat center/cover;
+  }
+  main .img_txt .cup {
+    background: url(images/desktop/image-stand-out.jpg) no-repeat center/cover;
+  }
+  main .graphic_photography {
+    height: 50vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main .graphic_photography .box .text_box {
+    width: 80%;
+    bottom: -27%;
+    margin-bottom: 1.25rem;
+  }
+  main .graphic_photography .box .text_box h1 {
+    margin-block: 1rem;
+  }
+  main .graphic_photography .apple,
+  main .graphic_photography .orange {
+    height: 100%;
+    width: 50%;
+  }
+  main .graphic_photography .apple {
+    background: url(images/desktop/image-graphic-design.jpg) no-repeat center/cover;
+  }
+  main .graphic_photography .orange {
+    background: url(images/desktop/image-photography.jpg) no-repeat center/cover;
+  }
+  main .client_testimonials_div {
+    height: 100vh;
+  }
+  main .client_testimonials_div .testimonials_heading {
+    padding: 3rem;
+  }
+  main .client_testimonials_div .partners {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    gap: 0 1rem;
+  }
+  section.gallery {
+    height: 90vh;
+  }
+  section.gallery .milk {
+    background: url(images/desktop//image-gallery-milkbottles.jpg) no-repeat center/cover;
+  }
+  section.gallery .orange {
+    background: url(images/desktop//image-gallery-orange.jpg) no-repeat center/cover;
+  }
+  section.gallery .cone {
+    background: url(images/desktop//image-gallery-cone.jpg) no-repeat center/cover;
+  }
+  section.gallery .sugar {
+    background: url(images/desktop/image-gallery-sugarcubes.jpg) no-repeat center/cover;
+  }
+}
+@media (min-width: 900px) {
+  main .columns,
+  main .graphic_photography {
+    height: 70vh;
+  }
+  main .img_txt .box .text_box {
+    padding-block: 6rem;
+  }
+  main .graphic_photography .box .text_box {
+    width: 70%;
+    bottom: -15%;
+  }
+  section.gallery {
+    height: 80vh;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
